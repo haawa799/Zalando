@@ -8,20 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		4329D0FA1BBF5944009BEABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329D0F91BBF5944009BEABF /* AppDelegate.swift */; };
-		4329D0FC1BBF5944009BEABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329D0FB1BBF5944009BEABF /* ViewController.swift */; };
+		4329D0FC1BBF5944009BEABF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329D0FB1BBF5944009BEABF /* FeedViewController.swift */; };
 		4329D0FF1BBF5944009BEABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4329D0FD1BBF5944009BEABF /* Main.storyboard */; };
 		4329D1011BBF5944009BEABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4329D1001BBF5944009BEABF /* Assets.xcassets */; };
 		4329D1041BBF5944009BEABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4329D1021BBF5944009BEABF /* LaunchScreen.storyboard */; };
+		4329D1271BBF5BC1009BEABF /* ZalandoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329D1261BBF5BC1009BEABF /* ZalandoAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
+		433AE3761BBF7692007D7F22 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3751BBF7692007D7F22 /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
+		433AE3791BBF779E007D7F22 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3771BBF779E007D7F22 /* ItemCell.swift */; settings = {ASSET_TAGS = (); }; };
+		433AE37A1BBF779E007D7F22 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433AE3781BBF779E007D7F22 /* ItemCell.xib */; settings = {ASSET_TAGS = (); }; };
+		433AE38A1BBFCC83007D7F22 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3871BBFCC83007D7F22 /* ColorView.swift */; settings = {ASSET_TAGS = (); }; };
+		433AE38B1BBFCC83007D7F22 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3881BBFCC83007D7F22 /* UIColor.swift */; settings = {ASSET_TAGS = (); }; };
+		433AE38C1BBFCC83007D7F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3891BBFCC83007D7F22 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		433AE3911BBFD170007D7F22 /* UIImage+MainColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3901BBFD170007D7F22 /* UIImage+MainColors.m */; settings = {ASSET_TAGS = (); }; };
+		433AE3971BBFD83F007D7F22 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3961BBFD83F007D7F22 /* ColorPickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		433AE3A11BC00213007D7F22 /* UIColor-MJGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3A01BC00213007D7F22 /* UIColor-MJGAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		433AE3A41BC067A2007D7F22 /* UIColor+HSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3A31BC067A2007D7F22 /* UIColor+HSL.m */; settings = {ASSET_TAGS = (); }; };
+		9F30FC8A6C8AA6BE2B87E9F8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA46BCFB0DC9B0DD309D8A73 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4329D0F61BBF5944009BEABF /* Zalando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zalando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4329D0F91BBF5944009BEABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4329D0FB1BBF5944009BEABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4329D0FB1BBF5944009BEABF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		4329D0FE1BBF5944009BEABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4329D1001BBF5944009BEABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4329D1031BBF5944009BEABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4329D1051BBF5944009BEABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4329D1261BBF5BC1009BEABF /* ZalandoAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZalandoAPIManager.swift; sourceTree = "<group>"; };
+		433AE3751BBF7692007D7F22 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		433AE3771BBF779E007D7F22 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		433AE3781BBF779E007D7F22 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		433AE37D1BBFAEFD007D7F22 /* Zalando-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zalando-Bridging-Header.h"; sourceTree = "<group>"; };
+		433AE3871BBFCC83007D7F22 /* ColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		433AE3881BBFCC83007D7F22 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		433AE3891BBFCC83007D7F22 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		433AE38F1BBFD155007D7F22 /* UIImage+MainColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MainColors.h"; sourceTree = "<group>"; };
+		433AE3901BBFD170007D7F22 /* UIImage+MainColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MainColors.m"; sourceTree = "<group>"; };
+		433AE3961BBFD83F007D7F22 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		433AE39F1BC00213007D7F22 /* UIColor-MJGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-MJGAdditions.h"; sourceTree = "<group>"; };
+		433AE3A01BC00213007D7F22 /* UIColor-MJGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-MJGAdditions.m"; sourceTree = "<group>"; };
+		433AE3A21BC067A2007D7F22 /* UIColor+HSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HSL.h"; sourceTree = "<group>"; };
+		433AE3A31BC067A2007D7F22 /* UIColor+HSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HSL.m"; sourceTree = "<group>"; };
+		B95B011C0330DB429E62B3A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CA46BCFB0DC9B0DD309D8A73 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6136ECB45270A73424CE996 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F30FC8A6C8AA6BE2B87E9F8 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +71,8 @@
 			children = (
 				4329D0F81BBF5944009BEABF /* Zalando */,
 				4329D0F71BBF5944009BEABF /* Products */,
+				CD07D93B774C99C316EBCF27 /* Pods */,
+				961CE6302A4D57C1E68B204B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +87,46 @@
 		4329D0F81BBF5944009BEABF /* Zalando */ = {
 			isa = PBXGroup;
 			children = (
+				433AE39F1BC00213007D7F22 /* UIColor-MJGAdditions.h */,
+				433AE3A01BC00213007D7F22 /* UIColor-MJGAdditions.m */,
 				4329D0F91BBF5944009BEABF /* AppDelegate.swift */,
-				4329D0FB1BBF5944009BEABF /* ViewController.swift */,
+				433AE3751BBF7692007D7F22 /* Utils.swift */,
+				433AE3771BBF779E007D7F22 /* ItemCell.swift */,
+				433AE3781BBF779E007D7F22 /* ItemCell.xib */,
+				4329D0FB1BBF5944009BEABF /* FeedViewController.swift */,
+				433AE3871BBFCC83007D7F22 /* ColorView.swift */,
+				433AE3881BBFCC83007D7F22 /* UIColor.swift */,
+				433AE3891BBFCC83007D7F22 /* ViewController.swift */,
+				433AE38F1BBFD155007D7F22 /* UIImage+MainColors.h */,
+				433AE3901BBFD170007D7F22 /* UIImage+MainColors.m */,
+				433AE3A21BC067A2007D7F22 /* UIColor+HSL.h */,
+				433AE3A31BC067A2007D7F22 /* UIColor+HSL.m */,
 				4329D0FD1BBF5944009BEABF /* Main.storyboard */,
 				4329D1001BBF5944009BEABF /* Assets.xcassets */,
 				4329D1021BBF5944009BEABF /* LaunchScreen.storyboard */,
 				4329D1051BBF5944009BEABF /* Info.plist */,
+				4329D1261BBF5BC1009BEABF /* ZalandoAPIManager.swift */,
+				433AE37D1BBFAEFD007D7F22 /* Zalando-Bridging-Header.h */,
+				433AE3961BBFD83F007D7F22 /* ColorPickerViewController.swift */,
 			);
 			path = Zalando;
+			sourceTree = "<group>";
+		};
+		961CE6302A4D57C1E68B204B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA46BCFB0DC9B0DD309D8A73 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD07D93B774C99C316EBCF27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6136ECB45270A73424CE996 /* Pods.debug.xcconfig */,
+				B95B011C0330DB429E62B3A0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4329D1081BBF5944009BEABF /* Build configuration list for PBXNativeTarget "Zalando" */;
 			buildPhases = (
+				24A7B71D628FAD1AAA7AEE8E /* Check Pods Manifest.lock */,
 				4329D0F21BBF5944009BEABF /* Sources */,
 				4329D0F31BBF5944009BEABF /* Frameworks */,
 				4329D0F41BBF5944009BEABF /* Resources */,
+				06A4F15D8B06B568A32FCE2F /* Embed Pods Frameworks */,
+				DA155F3F6D1C0AF6B2E193AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -90,6 +158,7 @@
 		4329D0EE1BBF5944009BEABF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Andriy K.";
 				TargetAttributes = {
@@ -121,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433AE37A1BBF779E007D7F22 /* ItemCell.xib in Resources */,
 				4329D1041BBF5944009BEABF /* LaunchScreen.storyboard in Resources */,
 				4329D1011BBF5944009BEABF /* Assets.xcassets in Resources */,
 				4329D0FF1BBF5944009BEABF /* Main.storyboard in Resources */,
@@ -129,13 +199,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06A4F15D8B06B568A32FCE2F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24A7B71D628FAD1AAA7AEE8E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA155F3F6D1C0AF6B2E193AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4329D0F21BBF5944009BEABF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4329D0FC1BBF5944009BEABF /* ViewController.swift in Sources */,
+				433AE3A11BC00213007D7F22 /* UIColor-MJGAdditions.m in Sources */,
+				433AE3971BBFD83F007D7F22 /* ColorPickerViewController.swift in Sources */,
+				433AE3911BBFD170007D7F22 /* UIImage+MainColors.m in Sources */,
+				4329D0FC1BBF5944009BEABF /* FeedViewController.swift in Sources */,
 				4329D0FA1BBF5944009BEABF /* AppDelegate.swift in Sources */,
+				4329D1271BBF5BC1009BEABF /* ZalandoAPIManager.swift in Sources */,
+				433AE38C1BBFCC83007D7F22 /* ViewController.swift in Sources */,
+				433AE3A41BC067A2007D7F22 /* UIColor+HSL.m in Sources */,
+				433AE3761BBF7692007D7F22 /* Utils.swift in Sources */,
+				433AE38A1BBFCC83007D7F22 /* ColorView.swift in Sources */,
+				433AE3791BBF779E007D7F22 /* ItemCell.swift in Sources */,
+				433AE38B1BBFCC83007D7F22 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,23 +372,30 @@
 		};
 		4329D1091BBF5944009BEABF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6136ECB45270A73424CE996 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Zalando/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.Zalando;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Zalando/Zalando-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4329D10A1BBF5944009BEABF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B95B011C0330DB429E62B3A0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Zalando/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.Zalando;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Zalando/Zalando-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -283,6 +418,7 @@
 				4329D10A1BBF5944009BEABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
