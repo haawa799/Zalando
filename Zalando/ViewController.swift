@@ -15,7 +15,6 @@ class ViewController:
   ColorViewDataSource
 {
   
-  @IBOutlet weak var colorView: ColorView!
   @IBOutlet weak var captureButton: UIButton!
   @IBOutlet weak var colorLabel: UILabel! {
     didSet {
@@ -31,8 +30,6 @@ class ViewController:
     super.viewDidLoad()
     
     picker?.delegate = self
-    colorView.dataSource = self
-    
     colorLabel.text = ""
   }
   
@@ -42,20 +39,20 @@ class ViewController:
   
   @IBAction func captureButtonTapped(sender: UIButton) {
     
-    var alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+    let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
     
-    var cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
+    let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
       UIAlertAction in
       self.openCamera()
     }
     
-    var galleryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) {
+    let galleryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) {
       
       UIAlertAction in
       self.openGallery()
     }
     
-    var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+    let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
       UIAlertAction in
     }
     
@@ -94,7 +91,6 @@ class ViewController:
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     if let vc = segue.destinationViewController as? ColorPickerViewController, let image = sender as? UIImage {
-      vc.delegate = self
       vc.image = image
     }
   }
@@ -130,7 +126,7 @@ class ViewController:
     // only continue, if the color string is not empty
     if colorString.characters.count > 0 {
       UIPasteboard.generalPasteboard().string = colorString
-      var alert = UIAlertView()
+      let alert = UIAlertView()
       alert.title = colorString
       alert.message = "Copied to clipboard"
       alert.addButtonWithTitle("Ok")
@@ -146,18 +142,5 @@ class ViewController:
   // will execute when the colorLabel's TapGestureRecognizer triggers
   @IBAction func colorLabelTap(sender: UITapGestureRecognizer) {
     copyColorToClipboard()
-  }
-}
-
-extension ViewController: ColorPickerDelegate {
-  func colorSelected(color: UIColor) {
-    //
-    let c = color.closestColorFromSet()
-    let name = c.name
-    let col = c.color
-    
-    self.color = col
-    colorLabel.text = "\(name)"
-    colorView.setNeedsDisplay()
   }
 }

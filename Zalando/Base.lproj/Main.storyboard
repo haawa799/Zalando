@@ -41,14 +41,11 @@
                                         <rect key="frame" x="153" y="20" width="387" height="140"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, I'm Zeli, your personal stylist" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdC-YO-2Jr">
-                                                <rect key="frame" x="72.5" y="60" width="242" height="20.5"/>
+                                                <rect key="frame" x="72" y="60" width="242" height="20.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="155" y="96" width="245" height="21"/>
-                                                </variation>
                                             </label>
                                         </subviews>
                                         <animations/>
@@ -75,14 +72,25 @@
                                     <constraint firstItem="Uu0-Th-rXI" firstAttribute="leading" secondItem="GOM-Rw-q0U" secondAttribute="leading" constant="5" id="poo-62-laL"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wiK-bP-oTd">
+                                <rect key="frame" x="20" y="200" width="560" height="300"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="I0w-Qo-bCZ" kind="embed" id="z1w-bD-fdZ"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GOM-Rw-q0U" firstAttribute="height" secondItem="cDK-AU-chw" secondAttribute="height" multiplier="0.3" id="1X1-8g-qeQ"/>
                             <constraint firstItem="GOM-Rw-q0U" firstAttribute="top" secondItem="qZL-NP-FLW" secondAttribute="bottom" id="5Nn-kS-JuS"/>
+                            <constraint firstItem="wiK-bP-oTd" firstAttribute="top" secondItem="GOM-Rw-q0U" secondAttribute="bottom" id="I5u-JI-94E"/>
+                            <constraint firstItem="wiK-bP-oTd" firstAttribute="height" secondItem="cDK-AU-chw" secondAttribute="height" multiplier="0.5" id="IYc-O3-aMM"/>
                             <constraint firstItem="GOM-Rw-q0U" firstAttribute="leading" secondItem="cDK-AU-chw" secondAttribute="leadingMargin" id="JuM-2L-qRD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GOM-Rw-q0U" secondAttribute="trailing" id="XHU-HU-2RI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wiK-bP-oTd" secondAttribute="trailing" id="pYl-Ic-23x"/>
+                            <constraint firstItem="wiK-bP-oTd" firstAttribute="leading" secondItem="cDK-AU-chw" secondAttribute="leadingMargin" id="w8c-Ux-imz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Your private assistant" image="help" id="iFx-kU-abO"/>
@@ -90,6 +98,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsn-6C-OlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1602" y="-458"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="prb-J1-dj6">
+            <objects>
+                <tableViewController id="I0w-Qo-bCZ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PRt-Oz-8WX">
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Here are my daily fashion advice:" id="OBO-yr-TTR">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="2K1-Vu-wNL" rowHeight="100" style="IBUITableViewCellStyleDefault" id="Ukg-cR-Ro0">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ukg-cR-Ro0" id="diL-Dk-xVV">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2K1-Vu-wNL">
+                                                    <rect key="frame" x="15" y="0.0" width="530" height="99.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <string key="text">1. Don’t get out of your zone of comfort.  If your clothing makes you feel miserably uncomfortable, no matter how stylish or cute it is, you won’t wear it.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="XrR-Mw-p4o" rowHeight="144" style="IBUITableViewCellStyleDefault" id="Ntx-kd-YMv">
+                                        <rect key="frame" x="0.0" y="128" width="560" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ntx-kd-YMv" id="BaM-us-oox">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="143.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XrR-Mw-p4o">
+                                                    <rect key="frame" x="15" y="0.0" width="530" height="143.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <string key="text">2. The voice of fashion you better ignore. Don’t listen to your mom or your aunt, or your Grandma, or your dad. They mean well, but you need to get their voices our of your head and find your own sense of style</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fnV-GE-f1N">
+                                        <rect key="frame" x="0.0" y="272" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fnV-GE-f1N" id="2iR-mp-J7g">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="I0w-Qo-bCZ" id="8jI-WH-2Er"/>
+                            <outlet property="delegate" destination="I0w-Qo-bCZ" id="tSQ-lR-St0"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="216-dQ-RCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2191.5" y="-477"/>
         </scene>
         <!--Feed-->
         <scene sceneID="tne-QT-ifu">
@@ -219,12 +305,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-NG-pIK" customClass="ColorView" customModule="Zalando" customModuleProvider="target">
-                                <rect key="frame" x="201" y="187" width="198" height="198"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-NG-pIK">
+                                <rect key="frame" x="210" y="205" width="180" height="180"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zalando" translatesAutoresizingMaskIntoConstraints="NO" id="hwI-sF-0U7">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="hwI-sF-0U7" firstAttribute="top" secondItem="AQL-NG-pIK" secondAttribute="top" id="2JM-Di-riR"/>
+                                    <constraint firstAttribute="trailing" secondItem="hwI-sF-0U7" secondAttribute="trailing" id="7LK-zx-BvM"/>
+                                    <constraint firstAttribute="bottom" secondItem="hwI-sF-0U7" secondAttribute="bottom" id="SO9-Ig-Z5V"/>
+                                    <constraint firstItem="hwI-sF-0U7" firstAttribute="leading" secondItem="AQL-NG-pIK" secondAttribute="leading" id="nTQ-Dz-xov"/>
                                     <constraint firstAttribute="width" secondItem="AQL-NG-pIK" secondAttribute="height" multiplier="1:1" id="nhS-zi-kS1"/>
                                 </constraints>
                             </view>
@@ -253,7 +349,7 @@
                         <constraints>
                             <constraint firstItem="AQL-NG-pIK" firstAttribute="trailing" secondItem="47O-X1-xkE" secondAttribute="trailingMargin" id="2PW-XO-4Tc"/>
                             <constraint firstItem="zvj-fK-8tY" firstAttribute="top" secondItem="rfF-Ow-P0T" secondAttribute="bottom" constant="60" id="3SS-EK-K96"/>
-                            <constraint firstItem="AQL-NG-pIK" firstAttribute="width" secondItem="47O-X1-xkE" secondAttribute="width" multiplier="0.33" id="K5q-pv-K8R"/>
+                            <constraint firstItem="AQL-NG-pIK" firstAttribute="width" secondItem="47O-X1-xkE" secondAttribute="width" multiplier="0.3" id="K5q-pv-K8R"/>
                             <constraint firstItem="Pkh-z9-ChB" firstAttribute="trailing" secondItem="47O-X1-xkE" secondAttribute="trailingMargin" id="NXl-AO-Pkb"/>
                             <constraint firstAttribute="centerX" secondItem="rfF-Ow-P0T" secondAttribute="centerX" id="ayb-Ib-VxV"/>
                             <constraint firstItem="Pkh-z9-ChB" firstAttribute="top" secondItem="AQL-NG-pIK" secondAttribute="bottom" constant="8" id="bv0-md-Nyx"/>
@@ -274,7 +370,6 @@
                     <connections>
                         <outlet property="captureButton" destination="rfF-Ow-P0T" id="N7b-6g-ZYs"/>
                         <outlet property="colorLabel" destination="Pkh-z9-ChB" id="30t-bl-ZZt"/>
-                        <outlet property="colorView" destination="AQL-NG-pIK" id="1xb-t5-X9R"/>
                         <segue destination="k2c-yC-A92" kind="push" identifier="pickSegue" id="LrE-Z0-u3J"/>
                     </connections>
                 </viewController>
@@ -347,15 +442,23 @@
                             <constraint firstItem="G9i-ei-imK" firstAttribute="width" secondItem="tju-se-UEN" secondAttribute="width" constant="1" id="Amg-qt-cE3"/>
                             <constraint firstItem="sdh-v3-j4T" firstAttribute="top" secondItem="G9i-ei-imK" secondAttribute="bottom" id="CKu-th-rD5"/>
                             <constraint firstItem="sdh-v3-j4T" firstAttribute="top" secondItem="W3w-6f-SEr" secondAttribute="bottom" id="Cun-fR-seN"/>
+                            <constraint firstItem="sdh-v3-j4T" firstAttribute="top" secondItem="tju-se-UEN" secondAttribute="bottom" id="Dlz-zc-79i"/>
                             <constraint firstItem="sdh-v3-j4T" firstAttribute="top" secondItem="tju-se-UEN" secondAttribute="bottom" id="FFV-lL-GD7"/>
                             <constraint firstAttribute="trailing" secondItem="tju-se-UEN" secondAttribute="trailing" id="GrV-Ot-Fu2"/>
                             <constraint firstItem="G9i-ei-imK" firstAttribute="top" secondItem="bG1-rK-uuR" secondAttribute="top" id="P3l-Qx-KGK"/>
                             <constraint firstItem="W3w-6f-SEr" firstAttribute="top" secondItem="bG1-rK-uuR" secondAttribute="top" id="Wke-Vr-7h2"/>
                             <constraint firstItem="W3w-6f-SEr" firstAttribute="width" secondItem="bG1-rK-uuR" secondAttribute="width" multiplier="0.75" id="Xsk-zh-tTB"/>
                             <constraint firstItem="W3w-6f-SEr" firstAttribute="leading" secondItem="bG1-rK-uuR" secondAttribute="leading" id="ebu-YH-UXS"/>
+                            <constraint firstItem="tju-se-UEN" firstAttribute="top" secondItem="bG1-rK-uuR" secondAttribute="topMargin" id="fPf-fZ-ZTc"/>
                             <constraint firstItem="tju-se-UEN" firstAttribute="leading" secondItem="W3w-6f-SEr" secondAttribute="trailing" constant="1" id="jAp-ka-3by"/>
                             <constraint firstItem="tju-se-UEN" firstAttribute="top" secondItem="bG1-rK-uuR" secondAttribute="top" id="ogB-OS-SA4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ogB-OS-SA4"/>
+                                <exclude reference="FFV-lL-GD7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="oXG-fr-Lb4"/>
                     <connections>
@@ -414,11 +517,26 @@
             </objects>
             <point key="canvasLocation" x="580" y="1189"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lbD-4X-AoP">
+            <objects>
+                <viewController id="5CZ-aR-ZBy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1AB-wT-iPa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHD-lv-WfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="bot" width="192" height="181"/>
         <image name="color" width="32" height="32"/>
         <image name="help" width="32" height="32"/>
         <image name="home" width="32" height="32"/>
+        <image name="zalando" width="200" height="200"/>
     </resources>
 </document>
