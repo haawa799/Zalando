@@ -21,22 +21,38 @@ public struct ShopItem {
   var imageURL: String = ""
   var name: String = ""
   
-  init(chunk: NSDictionary) {
+  init(chunk: NSDictionary, colored: Bool) {
     
-    if let article = chunk["article"] as? NSDictionary {
+    if colored == false {
+      
+      if let article = chunk["article"] as? NSDictionary {
+        type = .Article
+        imageURL = (article["umage_url"] as? String) ?? ""
+        name = (article["description"] as?
+          String) ?? ""
+      } else if let brand = chunk["brand"] as? NSDictionary {
+        type = .Brand
+        imageURL = (brand["umage_url"] as? String) ?? ""
+        name = (brand["name"] as? String) ?? ""
+        
+      }
+      else if let articleComposition = chunk["article_composition"] as? NSDictionary {
+        type = .ArticleComposition
+        imageURL = (articleComposition["umage_url"] as? String) ?? ""
+        name = (articleComposition["style_name"] as? String) ?? ""
+      }
+      
+    } else {
+      
       type = .Article
-      imageURL = (article["umage_url"] as? String) ?? ""
-      name = (article["description"] as?
-        String) ?? ""
-    } else if let brand = chunk["brand"] as? NSDictionary {
-      type = .Brand
-      imageURL = (brand["umage_url"] as? String) ?? ""
-      name = (brand["name"] as? String) ?? ""
-    }
-    else if let articleComposition = chunk["article_composition"] as? NSDictionary {
-      type = .ArticleComposition
-      imageURL = (articleComposition["umage_url"] as? String) ?? ""
-      name = (articleComposition["style_name"] as? String) ?? ""
+      if let media = chunk["media"] as? NSDictionary {
+        if let images = media["images"] as? [NSDictionary] {
+          if let im = images[0]["mediumUrl"] as? String {
+            imageURL = im
+          }
+        }
+      }
+      name = (chunk["name"] as? String) ?? ""
     }
   }
 }
@@ -66,12 +82,12 @@ class FeedViewController: UIViewController {
   func cellSize(type: ShopItem.ItemType) -> CGSize {
     var size = CGSizeZero
     switch type {
-      case ShopItem.ItemType.Article :
-        size = articleSize
-      case ShopItem.ItemType.ArticleComposition :
-        size = articleComposition
-      case ShopItem.ItemType.Brand :
-        size = brandSize
+    case ShopItem.ItemType.Article :
+      size = articleSize
+    case ShopItem.ItemType.ArticleComposition :
+      size = articleComposition
+    case ShopItem.ItemType.Brand :
+      size = brandSize
     }
     
     let heightBoost = randomBetweenNumbers(0.1, secondNum: 0.35)
@@ -104,22 +120,48 @@ class FeedViewController: UIViewController {
   
   func reloadData() {
     ZalandoAPIManager.sharedInstance().authanticate { (token) -> () in
-      ZalandoAPIManager.sharedInstance().feed(self.colorName) { (response) -> () in
-        if let response = response {
-          print(response)
-          
-          self.items = [ShopItem]()
-          if let items = response["items"] as? [NSDictionary] {
-            for item in items {
-              if let item = item as? NSDictionary {
-                let s = ShopItem(chunk: item)
-                self.items.append(s)
+      
+      if let colorName = self.colorName {
+        
+        ZalandoAPIManager.sharedInstance().feed(self.colorName) { (response) -> () in
+          if let response = response {
+            print(response)
+            
+            self.items = [ShopItem]()
+            if let items = response["content"] as? [NSDictionary] {
+              for item in items {
+                if let item = item as? NSDictionary {
+                  let s = ShopItem(chunk: item, colored: true)
+                  self.items.append(s)
+                }
               }
             }
+            self.collectionView.reloadData()
           }
-          self.collectionView.reloadData()
         }
+        
+      } else {
+        
+        ZalandoAPIManager.sharedInstance().feed(self.colorName) { (response) -> () in
+          if let response = response {
+            print(response)
+            
+            self.items = [ShopItem]()
+            if let items = response["items"] as? [NSDictionary] {
+              for item in items {
+                if let item = item as? NSDictionary {
+                  let s = ShopItem(chunk: item, colored: false)
+                  self.items.append(s)
+                }
+              }
+            }
+            self.collectionView.reloadData()
+          }
+        }
+        
       }
+      
+      
     }
   }
   

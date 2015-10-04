@@ -23,6 +23,8 @@
 		433AE3971BBFD83F007D7F22 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3961BBFD83F007D7F22 /* ColorPickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		433AE3A11BC00213007D7F22 /* UIColor-MJGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3A01BC00213007D7F22 /* UIColor-MJGAdditions.m */; settings = {ASSET_TAGS = (); }; };
 		433AE3A41BC067A2007D7F22 /* UIColor+HSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 433AE3A31BC067A2007D7F22 /* UIColor+HSL.m */; settings = {ASSET_TAGS = (); }; };
+		438B0FF91BC0ACBD00786CC4 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B0FF81BC0ACBD00786CC4 /* RoundImageView.swift */; settings = {ASSET_TAGS = (); }; };
+		438B0FFB1BC0ACD400786CC4 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B0FFA1BC0ACD400786CC4 /* RoundedImageView.swift */; settings = {ASSET_TAGS = (); }; };
 		9F30FC8A6C8AA6BE2B87E9F8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA46BCFB0DC9B0DD309D8A73 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		433AE3A01BC00213007D7F22 /* UIColor-MJGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-MJGAdditions.m"; sourceTree = "<group>"; };
 		433AE3A21BC067A2007D7F22 /* UIColor+HSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HSL.h"; sourceTree = "<group>"; };
 		433AE3A31BC067A2007D7F22 /* UIColor+HSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HSL.m"; sourceTree = "<group>"; };
+		438B0FF81BC0ACBD00786CC4 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		438B0FFA1BC0ACD400786CC4 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		B95B011C0330DB429E62B3A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA46BCFB0DC9B0DD309D8A73 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6136ECB45270A73424CE996 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			children = (
 				433AE39F1BC00213007D7F22 /* UIColor-MJGAdditions.h */,
 				433AE3A01BC00213007D7F22 /* UIColor-MJGAdditions.m */,
+				438B0FF81BC0ACBD00786CC4 /* RoundImageView.swift */,
+				438B0FFA1BC0ACD400786CC4 /* RoundedImageView.swift */,
 				4329D0F91BBF5944009BEABF /* AppDelegate.swift */,
 				433AE3751BBF7692007D7F22 /* Utils.swift */,
 				433AE3771BBF779E007D7F22 /* ItemCell.swift */,
@@ -258,12 +264,14 @@
 				4329D0FC1BBF5944009BEABF /* FeedViewController.swift in Sources */,
 				4329D0FA1BBF5944009BEABF /* AppDelegate.swift in Sources */,
 				4329D1271BBF5BC1009BEABF /* ZalandoAPIManager.swift in Sources */,
+				438B0FFB1BC0ACD400786CC4 /* RoundedImageView.swift in Sources */,
 				433AE38C1BBFCC83007D7F22 /* ViewController.swift in Sources */,
 				433AE3A41BC067A2007D7F22 /* UIColor+HSL.m in Sources */,
 				433AE3761BBF7692007D7F22 /* Utils.swift in Sources */,
 				433AE38A1BBFCC83007D7F22 /* ColorView.swift in Sources */,
 				433AE3791BBF779E007D7F22 /* ItemCell.swift in Sources */,
 				433AE38B1BBFCC83007D7F22 /* UIColor.swift in Sources */,
+				438B0FF91BC0ACBD00786CC4 /* RoundImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
