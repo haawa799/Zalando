@@ -14,6 +14,7 @@ protocol ColorPickerDelegate: class {
 
 class ColorPickerViewController: UIViewController {
   
+  var color: (UIColor, String)?
   weak var delegate: ColorPickerDelegate?
   
   
@@ -28,8 +29,6 @@ class ColorPickerViewController: UIViewController {
       tableView?.dataSource = self
       tableView?.delegate = self
       tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: "colorCell")
-//      tableView?.separatorColor = UIColor.clearColor()
-//      tableView?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
   }
   
@@ -111,9 +110,18 @@ extension ColorPickerViewController: UITableViewDelegate {
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let c = colors[indexPath.row].0
-    delegate?.colorSelected(c)
-    dismissViewControllerAnimated(true, completion: nil)
+    let selectedColor = colors[indexPath.row].0
+    performSegueWithIdentifier("showColoredFeed", sender: selectedColor)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    super.prepareForSegue(segue, sender: sender)
+    if let vc = segue.destinationViewController as? FeedViewController {
+      if let selectedColor = sender  as? UIColor {
+        let c = selectedColor.closestColorFromSet()
+        vc.colorName = c.name
+      }
+    }
   }
 }
 

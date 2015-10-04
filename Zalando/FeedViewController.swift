@@ -50,6 +50,14 @@ class FeedViewController: UIViewController {
     }
   }
   
+  var colorName: String? {
+    didSet {
+      if let colorName = colorName {
+        title = "Feed for \"\(colorName)\""
+      }
+      reloadData()
+    }
+  }
   
   let articleSize = CGSize(width: 400, height: 750)
   let articleComposition = CGSize(width: 1024, height: 889)
@@ -96,7 +104,7 @@ class FeedViewController: UIViewController {
   
   func reloadData() {
     ZalandoAPIManager.sharedInstance().authanticate { (token) -> () in
-      ZalandoAPIManager.sharedInstance().feed { (response) -> () in
+      ZalandoAPIManager.sharedInstance().feed(self.colorName) { (response) -> () in
         if let response = response {
           print(response)
           

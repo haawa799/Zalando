@@ -62,20 +62,38 @@ class ZalandoAPIManager: NSObject {
     }
   }
   
-  func feed(handler: (response: NSDictionary?) -> ()) {
-    let manager = AFHTTPRequestOperationManager(baseURL: NSURL(string: "https://api.dz.zalan.do/feeds/\(hardcodedMe)/items?limit=300&action=refresh"))
-    manager.requestSerializer = AFHTTPRequestSerializer()
-    manager.requestSerializer.setValue(token, forHTTPHeaderField: "Authorization")
-    manager.responseSerializer.acceptableContentTypes = NSSet(object: "application/x.zalando.myfeed+json") as Set<NSObject>
-    manager.GET("https://api.dz.zalan.do/feeds/\(hardcodedMe)/items?limit=300&action=refresh", parameters: nil, success: { (op, res) -> Void in
-      //
-      handler(response: res as? NSDictionary)
-
-      
-      
-      }) { (op, error) -> Void in
-        print(error)
-        handler(response: nil)
+  func feed(colorName: String?, handler: (response: NSDictionary?) -> ()) {
+    
+    if let colorName = colorName {
+      let manager = AFHTTPRequestOperationManager(baseURL: NSURL(string: "https://api.zalando.com/articles?color=green&color=\(colorName)&gender=male"))
+      manager.requestSerializer = AFHTTPRequestSerializer()
+      manager.requestSerializer.setValue("application/x.zalando.myfeed+json;version=2", forHTTPHeaderField: "Accept")
+      manager.requestSerializer.setValue("api-swagger-ui", forHTTPHeaderField: "x-client-name")
+      manager.GET("https://api.zalando.com/articles?color=green&color=\(colorName)&gender=male", parameters: nil, success: { (op, res) -> Void in
+        //
+        handler(response: res as? NSDictionary)
+        
+        
+        
+        }) { (op, error) -> Void in
+          print(error)
+          handler(response: nil)
+      }
+    } else {
+      let manager = AFHTTPRequestOperationManager(baseURL: NSURL(string: "https://api.dz.zalan.do/feeds/\(hardcodedMe)/items?limit=300&action=refresh"))
+      manager.requestSerializer = AFHTTPRequestSerializer()
+      manager.requestSerializer.setValue(token, forHTTPHeaderField: "Authorization")
+      manager.responseSerializer.acceptableContentTypes = NSSet(object: "application/x.zalando.myfeed+json") as Set<NSObject>
+      manager.GET("https://api.dz.zalan.do/feeds/\(hardcodedMe)/items?limit=300&action=refresh", parameters: nil, success: { (op, res) -> Void in
+        //
+        handler(response: res as? NSDictionary)
+        
+        
+        
+        }) { (op, error) -> Void in
+          print(error)
+          handler(response: nil)
+      }
     }
   }
   
